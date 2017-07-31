@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Protocol-oriented tableView demo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Protocol_oriented_TableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,12 +18,12 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUa-qU-42f">
-                                <rect key="frame" x="147.5" y="194" width="80" height="30"/>
-                                <state key="normal" title="Show Items"/>
+                                <rect key="frame" x="126" y="130" width="123" height="30"/>
+                                <state key="normal" title="Show Item Details"/>
                                 <connections>
                                     <action selector="showDetailController" destination="BYZ-38-t0r" eventType="touchUpInside" id="1xc-ON-uwh"/>
                                 </connections>
@@ -35,29 +35,12 @@
                             <constraint firstItem="SUa-qU-42f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="130" id="h0j-8J-mo4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Rg3-XP-Rsq"/>
+                    <navigationItem key="navigationItem" title="Protocol-oriented tableView demo" id="Rg3-XP-Rsq"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1170" y="138"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="W0h-KM-0vY">
-            <objects>
-                <viewController id="Izb-YB-QRP" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uog-CG-fQT"/>
-                        <viewControllerLayoutGuide type="bottom" id="cxd-J8-Plp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dfI-fN-8um">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uUG-vm-SE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1964" y="137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="677-Id-zyk">

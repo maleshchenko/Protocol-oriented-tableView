@@ -17,7 +17,8 @@ class ViewController: UIViewController {
 
     public init(model: ItemDetailModel) {
         self.model = model
-        self.sections = []
+        let sections: [TableSection] = [TitleSection(items: [model])]
+        self.sections = sections
         dataSource = DataSource(sections: sections)
         super.init(nibName: nil, bundle: nil)
         tableView.frame = view.frame
@@ -40,7 +41,7 @@ class ViewController: UIViewController {
     
     private func setupStyles() {
         title = "Item Status"
-        tableView.backgroundColor = UIColor.gray
+        self.navigationController?.navigationBar.isHidden = false
         tableView.allowsSelection = false
     }
 }

@@ -10,10 +10,8 @@ import Foundation
 
 public struct ItemDetailModel {
     let name: String
-    let description: String
     
-    public init(name: String, description: String) {
+    public init(name: String) {
         self.name = name
-        self.description = name
     }
 }

@@ -11,7 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBAction func showDetailController() {
-        let vc = ViewController(model: ItemDetailModel(name: "", description: ""))
+        let vc = ViewController(model: ItemDetailModel(name: "testName"))
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
