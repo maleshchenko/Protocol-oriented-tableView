@@ -22,8 +22,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUa-qU-42f">
-                                <rect key="frame" x="126" y="130" width="123" height="30"/>
-                                <state key="normal" title="Show Item Details"/>
+                                <rect key="frame" x="133.5" y="130" width="108" height="30"/>
+                                <state key="normal" title="Show Items List"/>
                                 <connections>
                                     <action selector="showDetailController" destination="BYZ-38-t0r" eventType="touchUpInside" id="1xc-ON-uwh"/>
                                 </connections>

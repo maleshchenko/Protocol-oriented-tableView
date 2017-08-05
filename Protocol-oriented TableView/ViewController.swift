@@ -11,13 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     private let tableView = UITableView(frame: .zero, style: .grouped)
     
-    private let model: ItemDetailModel
     private let sections: [TableSection]
     private let dataSource: DataSource
 
-    public init(model: ItemDetailModel) {
-        self.model = model
-        let sections: [TableSection] = [TitleSection(items: [model])]
+    public init(items: [ItemModel]) {
+        let sections: [TableSection] = [ItemsSection(items: items)]
+
         self.sections = sections
         dataSource = DataSource(sections: sections)
         super.init(nibName: nil, bundle: nil)
@@ -31,17 +30,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupStyles()
+        
         tableView.dataSource = dataSource
         tableView.delegate = dataSource
-        tableView.estimatedRowHeight = 48.0
+        tableView.estimatedRowHeight = 60.0
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.frame = view.frame
         view.addSubview(tableView)
     }
     
     private func setupStyles() {
-        title = "Item Status"
-        self.navigationController?.navigationBar.isHidden = false
+        title = "Items"
         tableView.allowsSelection = false
     }
 }

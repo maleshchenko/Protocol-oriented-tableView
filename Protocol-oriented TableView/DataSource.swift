@@ -10,7 +10,6 @@ import UIKit
 
 class DataSource: NSObject, UITableViewDataSource {
     let sections: [TableSection]
-    let defaultHeight: CGFloat = 16.0
     
     init(sections: [TableSection]) {
         self.sections = sections
@@ -46,15 +45,7 @@ extension DataSource: UITableViewDelegate {
         let section = sections[section]
         return section.headerHeight
     }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return defaultHeight
-    }
-    
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: tableView.sectionFooterHeight))
-    }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let section = sections[indexPath.section]
         section.didSelectRow(for: indexPath)
