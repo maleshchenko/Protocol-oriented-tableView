@@ -10,6 +10,7 @@ import UIKit
 
 struct ItemsSection: TableSection {
     let items: [ItemModel]
+    let didSelectItem: ((_ item: ItemModel) -> Void)?
     var numberOfRows: Int { return items.count }
     
     var cellFactory: TableSection.CellFactory {
@@ -30,6 +31,10 @@ struct ItemsSection: TableSection {
     }
     
     static let headerText = "Items List"
+    
+    func didSelectRow(for indexPath: IndexPath) {
+        didSelectItem?(items[indexPath.row])
+    }
 }
 
 class ItemsSectionHeaderView: UIView {

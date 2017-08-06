@@ -11,15 +11,18 @@ import UIKit
 class ViewController: UIViewController {
     private let tableView = UITableView(frame: .zero, style: .grouped)
     
-    private let sections: [TableSection]
-    private let dataSource: DataSource
+    private var sections: [TableSection] = []
+    private var dataSource: DataSource!
 
     public init(items: [ItemModel]) {
-        let sections: [TableSection] = [ItemsSection(items: items)]
-
-        self.sections = sections
-        dataSource = DataSource(sections: sections)
         super.init(nibName: nil, bundle: nil)
+
+        let sections: [TableSection] = [ItemsSection(items: items, didSelectItem: { [unowned self] (item) in
+            self.handleSelection(item: item)
+        })]
+        
+        self.sections = sections
+        self.dataSource = DataSource(sections: sections)
         tableView.frame = view.frame
     }
     
@@ -41,7 +44,10 @@ class ViewController: UIViewController {
     
     private func setupStyles() {
         title = "Items"
-        tableView.allowsSelection = false
+    }
+    
+    private func handleSelection(item: ItemModel) -> () {
+        print("\n\nselected \(item.name)\n\n")
     }
 }
 
