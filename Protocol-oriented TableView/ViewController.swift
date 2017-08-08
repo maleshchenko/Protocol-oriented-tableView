@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     private let tableView = UITableView(frame: .zero, style: .grouped)
-    
-    private var sections: [TableSection] = []
     private var dataSource: DataSource!
 
     public init(items: [ItemModel]) {
@@ -21,7 +19,6 @@ class ViewController: UIViewController {
             self.handleSelection(item: item)
         })]
         
-        self.sections = sections
         self.dataSource = DataSource(sections: sections)
         tableView.frame = view.frame
     }
