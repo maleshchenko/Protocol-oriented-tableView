@@ -22,7 +22,7 @@ public struct ItemModel {
 }
 
 class ItemCell: UITableViewCell, ReusableCell {
-    let defaultSpacing: CGFloat = 6.0
+    let defaultSpacing: CGFloat = 8.0
     
     let nameLabel = UILabel()
     let dateLabel = UILabel()
